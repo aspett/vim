@@ -17,3 +17,71 @@ snippet assigns
 	assigns(:${1:variable}) { should ${2} }
 snippet change
 	change(${1:Model}, :${2:method}).by(${3})
+snippet fnordgauge
+	#gauge :${1:gauge}_per_second, tick: 1.second
+	gauge :$1_per_minute, tick: 1.minute
+	gauge :$1_per_hour, tick: 1.hour
+	gauge :$1_per_day, tick: 1.day
+	${2}
+snippet fnordeventincr
+	event :${1:event_type} do
+		#incr :${2:gauge}_per_second
+		incr :$2_per_minute
+		incr :$2_per_hour
+		incr :$2_per_day
+	end
+snippet fnordeventday
+	event :${1:event_type} do
+		incr :${2:gauge}_per_day
+	end
+snippet fnordwidgetdaypage
+	widget '${2:name}', {
+		:title => "${3:description}",
+		:type => :numbers,
+		:width => 100,
+		:gauges => :${1:gauge}_per_day,
+		:offsets => [0,1,2,3,4,5,"s7"],
+		:autoupdate => 1
+	}
+
+	widget '$2', {
+		:title => "${4:description}",
+		:type => :timeline,
+		:width => 100,
+		:gauges => :$1_per_day,
+		:autoupdate => 1
+	}
+snippet fnordwidgetpage
+	widget '${2:name}', {
+		:title => "${3:description}",
+		:type => :numbers,
+		:width => 100,
+		:gauges => :${1:gauge}_per_day,
+		:offsets => [0,1,2,3,4,5,"s7"],
+		:autoupdate => 1
+	}
+
+	widget '$2', {
+		:title => "${4:description}",
+		:type => :timeline,
+		:width => 100,
+		:gauges => :$1_per_minute,
+		:autoupdate => 1
+	}
+
+	widget '$2', {
+		:title => "${5:description}",
+		:type => :timeline,
+		:width => 50,
+		:gauges => :$1_per_hour,
+		:autoupdate => 1
+	}
+
+	widget '$2', {
+		:title => "${6:description}",
+		:type => :timeline,
+		:width => 50,
+		:gauges => :$1_per_day,
+		:autoupdate => 1
+	}
+	$7

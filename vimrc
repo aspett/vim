@@ -16,20 +16,20 @@ Bundle 'gmarik/vundle'
 
 
 
-"
-" Bundles for Vundle
-" ==================
+" "
+" " Bundles for Vundle
+" " ==================
 
-" Fussy project wide file finder
+" " Fussy project wide file finder
 Bundle 'kien/ctrlp.vim'
 
-" Project file side pane.
+" " Project file side pane.
 Bundle 'scrooloose/nerdtree'
 
-" Update Ctags on save
+" " Update Ctags on save
 Bundle 'vim-scripts/AutoTag'
 
-" Tim Pope's useful plugins
+" " Tim Pope's useful plugins
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
@@ -44,28 +44,29 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'honza/vim-snippets'
 Bundle 'garbas/vim-snipmate'
 
-" New syntax
+" " New syntax
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'ap/vim-css-color'
 
-" Syntax checking on save
-Bundle 'scrooloose/syntastic'
+Bundle 'bling/vim-airline'
+" " Syntax checking on save
+" Bundle 'scrooloose/syntastic'
 
-" Navigate between tmux and vim panes easily
+" " Navigate between tmux and vim panes easily
 Bundle 'christoomey/vim-tmux-navigator'
 
-" Populate the args list from the quickfix list
-Bundle 'nelstrom/vim-qargs'
+" " Populate the args list from the quickfix list
+" Bundle 'nelstrom/vim-qargs'
 
-" Useful macros for refactoring ruby
+" " Useful macros for refactoring ruby
 runtime macros/matchit.vim
 Bundle 'ecomba/vim-ruby-refactoring'
 
-" Align on characters eg :Tab /,
+" " Align on characters eg :Tab /,
 Bundle 'godlygeek/tabular'
 
-" Ruby specific
+" " Ruby specific
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
@@ -74,24 +75,24 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'thoughtbot/vim-rspec'
 
-" Textobjects
-Bundle 'kana/vim-textobj-user'
-Bundle 'kana/vim-textobj-entire'
-Bundle 'kana/vim-textobj-line'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'lucapette/vim-textobj-underscore'
+" " Textobjects
+" Bundle 'kana/vim-textobj-user'
+" Bundle 'kana/vim-textobj-entire'
+" Bundle 'kana/vim-textobj-line'
+" Bundle 'kana/vim-textobj-indent'
+" Bundle 'lucapette/vim-textobj-underscore'
 
-" Colorschemes
+" " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
-" " Diff signs on margin
-" Bundle 'tomtom/quickfixsigns_vim'
+" " " Diff signs on margin
+" " Bundle 'tomtom/quickfixsigns_vim'
 
 
 
-"
-" GUI options
-" ===========
+" "
+" " GUI options
+" " ===========
 
 set ruler
 set number
@@ -100,17 +101,19 @@ syntax enable
 colorscheme solarized
 set background=dark
 
-" set laststatus=2 " always show the statusline
+" " set laststatus=2 " always show the statusline
 set showcmd " show current command in statusline
 
 
 
-"
-" Buffer Options
-" ==============
+" "
+" " Buffer Options
+" " ==============
 
 set hidden   " Buffers can be hidden and edited
 set autoread " Automatically load changes to open files
+autocmd BufWinLeave *.* mkview!
+autocmd BufWinEnter *.* silent loadview
 
 
 
