@@ -1,4 +1,4 @@
-set nocompatible
+
 
 
 
@@ -50,6 +50,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'ap/vim-css-color'
 
 Bundle 'bling/vim-airline'
+let s:background = get(g:, 'airline_solarized_bg', &background)
+Bundle 'edkolev/tmuxline.vim'
 " " Syntax checking on save
 " Bundle 'scrooloose/syntastic'
 
@@ -101,7 +103,7 @@ syntax enable
 colorscheme solarized
 set background=dark
 
-" " set laststatus=2 " always show the statusline
+set laststatus=2 " always show the statusline
 set showcmd " show current command in statusline
 
 
@@ -208,3 +210,5 @@ if has("persistent_undo")
   set undodir=~/.vim/undo " Allow undoes to persist even after a file is closed
   set undofile
 endif
+
+
