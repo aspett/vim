@@ -1,6 +1,6 @@
-
-
-
+set nocompatible
+set t_Co=256
+set mouse=a
 
 "
 " Vundle
@@ -51,9 +51,18 @@ Bundle 'ap/vim-css-color'
 
 Bundle 'bling/vim-airline'
 let s:background = get(g:, 'airline_solarized_bg', &background)
+let g:airline_powerline_fonts = 1
+let g:airline_theme='wombat'
+
+" Bundle 'airblade/vim-gitgutter'
+" This will change gitgutter bg colour to normal.
+" highlight clear SignColumn
 Bundle 'edkolev/tmuxline.vim'
 " " Syntax checking on save
-" Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
+
+" " Tabularizing
+Bundle 'godlygeek/tabular'
 
 " " Navigate between tmux and vim panes easily
 Bundle 'christoomey/vim-tmux-navigator'
@@ -87,8 +96,8 @@ Bundle 'thoughtbot/vim-rspec'
 " " Colorschemes
 Bundle 'altercation/vim-colors-solarized'
 
-" " " Diff signs on margin
-" " Bundle 'tomtom/quickfixsigns_vim'
+" " Diff signs on margin
+Bundle 'tomtom/quickfixsigns_vim'
 
 
 
@@ -98,6 +107,8 @@ Bundle 'altercation/vim-colors-solarized'
 
 set ruler
 set number
+nnoremap <silent><leader>n :set rnu! rnu? <cr>
+
 syntax enable
 
 colorscheme solarized
@@ -106,6 +117,9 @@ set background=dark
 set laststatus=2 " always show the statusline
 set showcmd " show current command in statusline
 
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 
 
 " "

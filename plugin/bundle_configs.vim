@@ -78,7 +78,8 @@ map <Leader>l :call RunLastSpec()<CR>
 " " tomtom/quickfixsigns_vim
 " " ========================
 
-" highlight SignColumn guibg=background
-" highlight SignColumn ctermbg=8
+highlight SignColumn guibg=background
+highlight SignColumn ctermbg=8
+" hi! link SignColumn LineNr
 " let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
 " let g:quickfixsigns_balloon=0
