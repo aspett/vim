@@ -99,7 +99,9 @@ Bundle 'altercation/vim-colors-solarized'
 " " Diff signs on margin
 Bundle 'tomtom/quickfixsigns_vim'
 
-
+" " Vim Shell?
+Bundle 'Shougo/vimshell'
+Bundle 'Shougo/vimproc'
 
 " "
 " " GUI options

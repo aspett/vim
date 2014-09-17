@@ -80,6 +80,7 @@ map <Leader>l :call RunLastSpec()<CR>
 
 highlight SignColumn guibg=background
 highlight SignColumn ctermbg=8
+sign define QFS_VCS_CHANGE text=~  texthl=QuickFixSignsDiffChange
 " hi! link SignColumn LineNr
-" let g:quickfixsigns_classes=['qfl', 'vcsdiff', 'breakpoints']
+let g:quickfixsigns_classes=['vcsdiff']
 " let g:quickfixsigns_balloon=0
