@@ -100,8 +100,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " " Vim Shell?
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/vimproc'
+" Bundle 'Shougo/vimshell'
+" Bundle 'Shougo/vimproc'
 
 " "
 " " GUI options
