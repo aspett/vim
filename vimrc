@@ -2,6 +2,9 @@ set nocompatible
 set t_Co=256
 set mouse=a
 
+" Fix tmux/vim
+set clipboard=unnamed
+
 "
 " Vundle
 " ======
@@ -49,6 +52,10 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'ap/vim-css-color'
 
+Bundle 'suan/vim-instant-markdown'
+filetype plugin on
+
+
 Bundle 'bling/vim-airline'
 let s:background = get(g:, 'airline_solarized_bg', &background)
 let g:airline_powerline_fonts = 1
@@ -59,7 +66,15 @@ let g:airline_theme='wombat'
 " highlight clear SignColumn
 Bundle 'edkolev/tmuxline.vim'
 " " Syntax checking on save
-Bundle 'scrooloose/syntastic'
+" let g:tmuxline_preset = {
+"       \'a'    : '#S',
+"       \'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+"       \'win'  : ['#I', '#W'],
+"       \'cwin' : ['#I', '#W', '#F'],
+"       \'x'    : '#(travis_status #{pane_current_path})',
+"       \'y'    : ['%R', '%a', '%Y'],
+"       \'z'    : '#H'}
+" Bundle 'scrooloose/syntastic'
 
 " " Tabularizing
 Bundle 'godlygeek/tabular'
@@ -85,6 +100,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'vimux'
 
 " " Textobjects
 " Bundle 'kana/vim-textobj-user'
@@ -110,6 +126,10 @@ Bundle 'tomtom/quickfixsigns_vim'
 set ruler
 set number
 nnoremap <silent><leader>n :set rnu! rnu? <cr>
+
+" Hack
+nnoremap <silent><leader>q :normal aLoyaltyHarmonizer<ESC>
+nnoremap <silent><leader>Q :normal aloyalty_haronizer<ESC>
 
 syntax enable
 
@@ -222,9 +242,9 @@ set backupskip=/tmp/*,/private/tmp/*
 " ====
 
 set undolevels=10000
-if has("persistent_undo")
-  set undodir=~/.vim/undo " Allow undoes to persist even after a file is closed
-  set undofile
-endif
+" if has("persistent_undo")
+set undofile
+set undodir=~/.vim/undo " Allow undoes to persist even after a file is closed
+" endif
 
 

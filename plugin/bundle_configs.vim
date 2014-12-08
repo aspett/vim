@@ -66,8 +66,11 @@ nnoremap - :Switch<cr>
 " thoughtbot/vim-rspec
 " ====================
 
-let g:rspec_command = "!clear; zeus rspec --no-color {spec}"
-nmap <leader>R :let g:rspec_command = "!clear; zeus rspec --no-color {spec}"
+" let g:rspec_command = "!clear; zeus rspec --no-color {spec}"
+" nmap <leader>R :let g:rspec_command = "!clear; zeus rspec --no-color {spec}"
+let g:rspec_command = 'call VimuxRunCommand("zeus rspec --tag=~integration {spec}")'
+" let g:rspec_command = "!clear; call VimuxRunCommand('zeus rspec --no-color {spec}')"
+nmap <leader>R :let g:rspec_command ='call VimuxRunCommand("zeus rspec --tag=~integration {spec}")'
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
