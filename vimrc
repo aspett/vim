@@ -52,7 +52,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'ap/vim-css-color'
 
-Bundle 'suan/vim-instant-markdown'
+" Bundle 'suan/vim-instant-markdown'
 filetype plugin on
 
 
@@ -74,10 +74,10 @@ Bundle 'edkolev/tmuxline.vim'
 "       \'x'    : '#(travis_status #{pane_current_path})',
 "       \'y'    : ['%R', '%a', '%Y'],
 "       \'z'    : '#H'}
-" Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/syntastic'
 
 " " Tabularizing
-Bundle 'godlygeek/tabular'
+" Bundle 'godlygeek/tabular'
 
 " " Navigate between tmux and vim panes easily
 Bundle 'christoomey/vim-tmux-navigator'
@@ -102,6 +102,9 @@ Bundle 'AndrewRadev/switch.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'vimux'
 
+" " Javascript
+Bundle 'othree/yajs.vim'
+
 " " Textobjects
 " Bundle 'kana/vim-textobj-user'
 " Bundle 'kana/vim-textobj-entire'
@@ -115,9 +118,15 @@ Bundle 'altercation/vim-colors-solarized'
 " " Diff signs on margin
 Bundle 'tomtom/quickfixsigns_vim'
 
+" " Postman in Vim
+Bundle 'nicwest/QQ.vim'
+
 " " Vim Shell?
 " Bundle 'Shougo/vimshell'
 " Bundle 'Shougo/vimproc'
+"
+" " Co Vim
+Bundle 'FredKSchott/CoVim'
 
 " "
 " " GUI options
@@ -132,6 +141,8 @@ nnoremap <silent><leader>q :normal aLoyaltyHarmonizer<ESC>
 nnoremap <silent><leader>Q :normal aloyalty_haronizer<ESC>
 
 syntax enable
+filetype on
+au BufNewFile,BufRead *.hbs set filetype=html
 
 colorscheme solarized
 set background=dark
