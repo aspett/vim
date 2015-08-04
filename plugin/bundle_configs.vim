@@ -68,9 +68,9 @@ nnoremap - :Switch<cr>
 
 " let g:rspec_command = "!clear; rspec --no-color {spec}"
 " nmap <leader>R :let g:rspec_command = "!clear; rspec --no-color {spec}"
-let g:rspec_command = 'call VimuxRunCommand("rspec --tag=~integration {spec}")'
+let g:rspec_command = 'call VimuxRunCommand("bundle exec rspec --tag=~integration {spec}")'
 " let g:rspec_command = "!clear; call VimuxRunCommand('rspec --no-color {spec}')"
-nmap <leader>R :let g:rspec_command ='call VimuxRunCommand("rspec --tag=~integration {spec}")'
+nmap <leader>R :let g:rspec_command ='call VimuxRunCommand("bundle exec rspec --tag=~integration {spec}")'
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>

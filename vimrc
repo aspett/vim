@@ -2,8 +2,16 @@ set nocompatible
 set t_Co=256
 set mouse=a
 
+command W w
+command Q q
+command Wq wq
+
 " Fix tmux/vim
 set clipboard=unnamed
+
+" Highlight 80th column to indicate code should not be at/past that point
+set textwidth=79 " default max width
+set colorcolumn=+1
 
 "
 " Vundle
@@ -104,6 +112,7 @@ Bundle 'vimux'
 
 " " Javascript
 Bundle 'othree/yajs.vim'
+" Bundle 'geekjuice/vim-mocha'
 
 " " Textobjects
 " Bundle 'kana/vim-textobj-user'
@@ -126,7 +135,10 @@ Bundle 'nicwest/QQ.vim'
 " Bundle 'Shougo/vimproc'
 "
 " " Co Vim
-Bundle 'FredKSchott/CoVim'
+" Bundle 'FredKSchott/CoVim'
+"
+" " Easy Motions
+Bundle 'Lokaltog/vim-easymotion'
 
 " "
 " " GUI options
@@ -200,6 +212,7 @@ endif
 " Timeout options for commands
 set ttimeout
 set ttimeoutlen=0
+
 
 
 
