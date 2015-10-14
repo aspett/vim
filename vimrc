@@ -27,9 +27,9 @@ Bundle 'gmarik/vundle'
 
 
 
-" "
-" " Bundles for Vundle
-" " ==================
+"
+" Bundles for Vundle
+" ==================
 
 " " Fussy project wide file finder
 Bundle 'kien/ctrlp.vim'
@@ -38,7 +38,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
 " " Update Ctags on save
-Bundle 'vim-scripts/AutoTag'
+"""Bundle 'vim-scripts/AutoTag'
 
 " " Tim Pope's useful plugins
 Bundle 'tpope/vim-unimpaired'
@@ -50,17 +50,17 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-commentary'
 
 " Vim-snipmate and dependencies
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'honza/vim-snippets'
-Bundle 'garbas/vim-snipmate'
+"""Bundle 'MarcWeber/vim-addon-mw-utils'
+"""Bundle 'tomtom/tlib_vim'
+"""Bundle 'honza/vim-snippets'
+"""Bundle 'garbas/vim-snipmate'
 
 " " New syntax
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'ap/vim-css-color'
 
-" Bundle 'suan/vim-instant-markdown'
+"""Bundle 'suan/vim-instant-markdown'
 filetype plugin on
 
 
@@ -85,7 +85,7 @@ Bundle 'edkolev/tmuxline.vim'
 Bundle 'scrooloose/syntastic'
 
 " " Tabularizing
-" Bundle 'godlygeek/tabular'
+Bundle 'godlygeek/tabular'
 
 " " Navigate between tmux and vim panes easily
 Bundle 'christoomey/vim-tmux-navigator'
@@ -94,11 +94,8 @@ Bundle 'christoomey/vim-tmux-navigator'
 " Bundle 'nelstrom/vim-qargs'
 
 " " Useful macros for refactoring ruby
-runtime macros/matchit.vim
-Bundle 'ecomba/vim-ruby-refactoring'
-
-" " Align on characters eg :Tab /,
-Bundle 'godlygeek/tabular'
+" runtime macros/matchit.vim
+" Bundle 'ecomba/vim-ruby-refactoring'
 
 " " Ruby specific
 Bundle 'tpope/vim-rails'
@@ -128,7 +125,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tomtom/quickfixsigns_vim'
 
 " " Postman in Vim
-Bundle 'nicwest/QQ.vim'
+" Bundle 'nicwest/QQ.vim'
 
 " " Vim Shell?
 " Bundle 'Shougo/vimshell'
@@ -138,7 +135,7 @@ Bundle 'nicwest/QQ.vim'
 " Bundle 'FredKSchott/CoVim'
 "
 " " Easy Motions
-Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Lokaltog/vim-easymotion'
 
 " "
 " " GUI options
@@ -270,5 +267,3 @@ set undolevels=10000
 set undofile
 set undodir=~/.vim/undo " Allow undoes to persist even after a file is closed
 " endif
-
-
