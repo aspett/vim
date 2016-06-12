@@ -6,6 +6,9 @@ command W w
 command Q q
 command Wq wq
 
+nmap <leader>pl v2b:!pleasant-lawyer<CR>
+vmap <leader>pl :!pleasant-lawyer<CR>
+
 " Fix tmux/vim
 set clipboard=unnamed
 
@@ -267,3 +270,5 @@ set undolevels=10000
 set undofile
 set undodir=~/.vim/undo " Allow undoes to persist even after a file is closed
 " endif
+"
+set tags=./tags,tags;$HOME
